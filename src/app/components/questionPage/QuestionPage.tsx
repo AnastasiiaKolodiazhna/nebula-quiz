@@ -10,8 +10,8 @@ import {
   AnswerItem,
 } from "./QuestionPage.style";
 import { useHandleAnswer } from "@/hooks/useHandleAnswer";
-import { getTextFromTemplate } from "@/utils/getTextFromTemplate";
 import { Answer } from "@/types/answer";
+import { useGetTextFromTemplate } from "@/hooks/useGetTextFromTemplate";
 
 const QuestionPage = ({ question }: { question: Question }) => {
   const {
@@ -22,15 +22,12 @@ const QuestionPage = ({ question }: { question: Question }) => {
   } = question;
 
   const { handleAnswerClick } = useHandleAnswer(question);
+  const { replacedPlaceholders } = useGetTextFromTemplate(questionTemplate);
 
   return (
     <Container>
       <QuestionContainer>
-        <Title>
-          {questionTemplate
-            ? getTextFromTemplate(questionTemplate)
-            : questionText}
-        </Title>
+        <Title>{questionTemplate ? replacedPlaceholders : questionText}</Title>
         {statement && <Statement>{`"${statement}"`}</Statement>}
         <AnswerList>
           {answers.length > 0 ? (
@@ -49,7 +46,7 @@ const QuestionPage = ({ question }: { question: Question }) => {
               </AnswerItem>
             ))
           ) : (
-            <AnswerItem>No answers available</AnswerItem>
+            <AnswerItem key="no-answers">No answers available</AnswerItem>
           )}
         </AnswerList>
       </QuestionContainer>

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { Button, Header, Icon, VectorImage } from './Header.style';
+import { useRouter } from "next/navigation";
+import { Button, Header, Icon, VectorImage } from "./Header.style";
 
 export const HeaderComponent = () => {
   const router = useRouter();

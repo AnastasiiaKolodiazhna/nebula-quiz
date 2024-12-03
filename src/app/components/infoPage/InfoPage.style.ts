@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
@@ -69,9 +69,11 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
 
-  transition: background-color 0.25s, box-shadow 0.25s;
+  transition:
+    background-color 0.25s,
+    box-shadow 0.25s;
 
-  &:active, 
+  &:active,
   &:hover {
     background: linear-gradient(
       160deg,

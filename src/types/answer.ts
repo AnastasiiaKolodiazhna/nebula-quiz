@@ -2,7 +2,7 @@ export type Answer = {
   id: string;
   text: string;
   next: string | null;
-  value?: boolean
+  value?: boolean;
 };
 
 export interface AnswerData {

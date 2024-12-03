@@ -95,8 +95,9 @@
           "text": "I was generally happy with my relationship",
           "next": "partnerPersonalityType"
         },
-        { "text": "I’ve never been in a relationship", 
-          "next": "partnerPersonalityType" 
+        {
+          "text": "I’ve never been in a relationship",
+          "next": "partnerPersonalityType"
         }
       ]
     },
@@ -123,7 +124,7 @@
         {
           "if": { "overthink": true },
           "next": "important"
-        }, 
+        },
         {
           "if": { "overthink": false },
           "next": "emotionalControl"
@@ -204,7 +205,7 @@
           "text": "Cautious. I’ve struggled before, but I’m hopeful.",
           "next": "whereHeard"
         },
-        {  
+        {
           "text": "I’m feeling a little anxious, honestly.",
           "next": "whereHeard"
         }
