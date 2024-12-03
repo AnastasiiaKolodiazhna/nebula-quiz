@@ -10,7 +10,7 @@ export const Summary = () => {
       <div>
         {answers.map((answer) => (
           <div key={answer.questionId}>
-            <Question>{answer.describtion}</Question>
+            <Question>{answer.description}</Question>
             <Answer>
               {typeof answer.answer === "boolean"
                 ? booleanToString(answer.answer)

@@ -1,6 +1,6 @@
 "use client";
 
-import { Question } from "@/types/types";
+import { Question } from "@/types/question";
 import {
   Button,
   Container,

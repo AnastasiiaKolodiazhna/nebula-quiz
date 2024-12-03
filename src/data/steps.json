@@ -5,46 +5,46 @@
       "defaultQuestion": true,
       "type": "question",
       "question": "Select your gender:",
-      "describtion": "Your gender",
+      "description": "Your gender",
       "answers": [
-        { "id": 1, "text": "Female", "next": "relationshipStatus" },
-        { "id": 2, "text": "Male", "next": "relationshipStatus" }
+        { "text": "Female", "next": "relationshipStatus" },
+        { "text": "Male", "next": "relationshipStatus" }
       ]
     },
     {
       "id": "relationshipStatus",
       "type": "question",
       "question": "So we can get to know you better, tell us about your relationship status.",
-      "describtion": "Relationship Status",
+      "description": "Relationship Status",
       "answers": [
-        { "id": 1, "text": "Single", "next": "singleParent" },
-        { "id": 2, "text": "In a relationship", "next": "parent" }
+        { "text": "Single", "next": "singleParent" },
+        { "text": "In a relationship", "next": "parent" }
       ]
     },
     {
       "id": "singleParent",
       "type": "question",
       "question": "Are you a single parent?",
-      "describtion": "Single Parent",
+      "description": "Single Parent",
       "answers": [
-        { "id": 1, "value": true, "text": "Yes", "next": "singleProblem" },
-        { "id": 2, "value": false, "text": "No", "next": "singleProblem" }
+        { "value": true, "text": "Yes", "next": "singleProblem" },
+        { "value": false, "text": "No", "next": "singleProblem" }
       ]
     },
     {
       "id": "parent",
       "type": "question",
       "question": "Are you a parent?",
-      "describtion": "Are Parent",
+      "description": "Are Parent",
       "answers": [
-        { "id": "a1", "text": "Yes", "next": "relationshipProblem" },
-        { "id": "a2", "text": "No", "next": "relationshipProblem" }
+        { "text": "Yes", "next": "relationshipProblem" },
+        { "text": "No", "next": "relationshipProblem" }
       ]
     },
     {
       "id": "singleProblem",
       "type": "question",
-      "describtion": "Statement best describes you",
+      "description": "Statement best describes you",
       "questionTemplate": {
         "default": "{gender} need a slightly different approach to improve their relationship. Which statement best describes you?",
         "conditions": [
@@ -56,17 +56,14 @@
       },
       "answers": [
         {
-          "id": "a1",
           "text": "I’m very unhappy with how things are going in my relationship",
           "next": "overthink"
         },
         {
-          "id": "a2",
           "text": "I’m unhappy with parts of my relationship, but some things are working well",
           "next": "overthink"
         },
         {
-          "id": "a3",
           "text": "I’m generally happy in my relationship",
           "next": "overthink"
         }
@@ -75,7 +72,7 @@
     {
       "id": "relationshipProblem",
       "type": "question",
-      "describtion": "How did you feel in your last relationship",
+      "description": "How did you feel in your last relationship",
       "questionTemplate": {
         "default": "Single {gender} need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
         "conditions": [
@@ -87,31 +84,30 @@
       },
       "answers": [
         {
-          "id": "a1",
           "text": "I was unhappy with low things were going in my relationship",
           "next": "partnerPersonalityType"
         },
         {
-          "id": "a2",
           "text": "I was unhappy with parts of my relationship, but some thing were working",
           "next": "partnerPersonalityType"
         },
         {
-          "id": "a3",
           "text": "I was generally happy with my relationship",
           "next": "partnerPersonalityType"
         },
-        { "id": "a4", "text": "I’ve never been in a relationship", "next": "partnerPersonalityType" }
+        { "text": "I’ve never been in a relationship", 
+          "next": "partnerPersonalityType" 
+        }
       ]
     },
     {
       "id": "overthink",
       "type": "question",
       "question": "Do you tend to overthink?",
-      "describtion": "Tend to overthink",
+      "description": "Tend to overthink",
       "answers": [
-        { "id": "a1", "text": "Yes", "value": true, "next": "info" },
-        { "id": "a2", "text": "No", "value": false, "next": "info" }
+        { "text": "Yes", "value": true, "next": "info" },
+        { "text": "No", "value": false, "next": "info" }
       ]
     },
     {
@@ -138,46 +134,46 @@
       "id": "important",
       "type": "question",
       "question": "What is most important to you?",
-      "describtion": "Most important",
+      "description": "Most important",
       "answers": [
-        { "id": "a1", "text": "Success", "next": "whereHeard" },
-        { "id": "a2", "text": "Romance", "next": "whereHeard" },
-        { "id": "a3", "text": "Stability", "next": "whereHeard" },
-        { "id": "a4", "text": "Freedom", "next": "whereHeard" }
+        { "text": "Success", "next": "whereHeard" },
+        { "text": "Romance", "next": "whereHeard" },
+        { "text": "Stability", "next": "whereHeard" },
+        { "text": "Freedom", "next": "whereHeard" }
       ]
     },
     {
       "id": "emotionalControl",
       "type": "question",
       "question": "Is emotional control tricky for you?",
-      "describtion": "Is emotional control tricky",
+      "description": "Is emotional control tricky",
       "answers": [
-        { "id": "a1", "text": "Yes", "next": "whereHeard" },
-        { "id": "a2", "text": "Sometimes", "next": "whereHeard" },
-        { "id": "a3", "text": "Rarely", "next": "whereHeard" },
-        { "id": "a4", "text": "Not at all", "next": "whereHeard" }
+        { "text": "Yes", "next": "whereHeard" },
+        { "text": "Sometimes", "next": "whereHeard" },
+        { "text": "Rarely", "next": "whereHeard" },
+        { "text": "Not at all", "next": "whereHeard" }
       ]
     },
     {
       "id": "partnerPersonalityType",
       "type": "question",
       "question": "Is your partner an introvert or extrovert?",
-      "describtion": "Is your partner an introvert or extrovert",
+      "description": "Is your partner an introvert or extrovert",
       "answers": [
-        { "id": "a1", "text": "Introvert", "next": "partnerGender" },
-        { "id": "a2", "text": "Extrovert", "next": "partnerGender" },
-        { "id": "a3", "text": "A bit of both", "next": "partnerGender" }
+        { "text": "Introvert", "next": "partnerGender" },
+        { "text": "Extrovert", "next": "partnerGender" },
+        { "text": "A bit of both", "next": "partnerGender" }
       ]
     },
     {
       "id": "partnerGender",
       "type": "question",
       "question": "What is your partner’s gender?",
-      "describtion": "Partner’s gender",
+      "description": "Partner’s gender",
 
       "answers": [
-        { "id": "a1", "text": "Male", "next": "relationshipPriority" },
-        { "id": "a2", "text": "Female", "next": "relationshipPriority" }
+        { "text": "Male", "next": "relationshipPriority" },
+        { "text": "Female", "next": "relationshipPriority" }
       ]
     },
     {
@@ -185,33 +181,30 @@
       "type": "question",
       "question": "Do you agree with the statement below?",
       "statement": "My partner and I make sex a priority in our relationship",
-      "describtion": "My partner and I make sex a priority in our relationship",
+      "description": "My partner and I make sex a priority in our relationship",
       "answers": [
-        { "id": "a1", "text": "Strongly agree", "next": "relationsipGoals" },
-        { "id": "a2", "text": "Agree", "next": "relationsipGoals" },
-        { "id": "a3", "text": "Neutral", "next": "relationsipGoals" },
-        { "id": "a4", "text": "Disagee", "next": "relationsipGoals" },
-        { "id": "a5", "text": "Strongly disagree", "next": "relationsipGoals" }
+        { "text": "Strongly agree", "next": "relationsipGoals" },
+        { "text": "Agree", "next": "relationsipGoals" },
+        { "text": "Neutral", "next": "relationsipGoals" },
+        { "text": "Disagee", "next": "relationsipGoals" },
+        { "text": "Strongly disagree", "next": "relationsipGoals" }
       ]
     },
     {
       "id": "relationsipGoals",
       "type": "question",
       "question": "When you think about your relationship goals, you feel...?",
-      "describtion": "Your feelings about relationship",
+      "description": "Your feelings about relationship",
       "answers": [
         {
-          "id": "a1",
           "text": "Optimistic! They are totally doable, with some guidance.",
           "next": "whereHeard"
         },
         {
-          "id": "a2",
           "text": "Cautious. I’ve struggled before, but I’m hopeful.",
           "next": "whereHeard"
         },
-        {
-          "id": "a3",
+        {  
           "text": "I’m feeling a little anxious, honestly.",
           "next": "whereHeard"
         }
@@ -221,28 +214,27 @@
       "id": "whereHeard",
       "type": "question",
       "question": "Where did you hear about us?",
-      "describtion": "Where did you hear about us",
+      "description": "Where did you hear about us",
       "answers": [
-        { "id": "a1", "text": "Poster or Billboard", "next": null },
-        { "id": "a2", "text": "Friend or Family", "next": null },
-        { "id": "a3", "text": "Instagram", "next": null },
-        { "id": "a4", "text": "Direct Mail or Package Insert", "next": null },
-        { "id": "a5", "text": "Online TV or Streaming TV", "next": null },
-        { "id": "a6", "text": "TV", "next": null },
-        { "id": "a7", "text": "Radio", "next": null },
+        { "text": "Poster or Billboard", "next": null },
+        { "text": "Friend or Family", "next": null },
+        { "text": "Instagram", "next": null },
+        { "text": "Direct Mail or Package Insert", "next": null },
+        { "text": "Online TV or Streaming TV", "next": null },
+        { "text": "TV", "next": null },
+        { "text": "Radio", "next": null },
         {
-          "id": "a8",
           "text": "Search Engine(Google, Bing, etc.)",
           "next": null
         },
-        { "id": "a9", "text": "Newspaper or Magazine", "next": null },
-        { "id": "a10", "text": "Facebook", "next": null },
-        { "id": "a11", "text": "Blog Post or Website Review", "next": null },
-        { "id": "a12", "text": "Podcast", "next": null },
-        { "id": "a13", "text": "Influencer", "next": null },
-        { "id": "a14", "text": "Youtube", "next": null },
-        { "id": "a15", "text": "Pinterest", "next": null },
-        { "id": "a16", "text": "Other", "next": null }
+        { "text": "Newspaper or Magazine", "next": null },
+        { "text": "Facebook", "next": null },
+        { "text": "Blog Post or Website Review", "next": null },
+        { "text": "Podcast", "next": null },
+        { "text": "Influencer", "next": null },
+        { "text": "Youtube", "next": null },
+        { "text": "Pinterest", "next": null },
+        { "text": "Other", "next": null }
       ]
     }
   ]

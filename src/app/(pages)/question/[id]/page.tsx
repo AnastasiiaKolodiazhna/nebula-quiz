@@ -1,6 +1,6 @@
 import InfoPage from "@/app/components/infoPage/InfoPage";
 import QuestionPage from "@/app/components/questionPage/QuestionPage";
-import { Question } from "@/types/types";
+import { Question } from "@/types/question";
 import { getQuestion } from "@/utils/getQuestion";
 
 interface QuestionPageParams {

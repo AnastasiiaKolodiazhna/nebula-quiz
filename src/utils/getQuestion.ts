@@ -1,5 +1,5 @@
 import config from "@/data/steps.json";
-import { Question } from "@/types/types";
+import { Question } from "@/types/question";
 
 export const getQuestion = (id: string) => {
   const question = config.questions.find(

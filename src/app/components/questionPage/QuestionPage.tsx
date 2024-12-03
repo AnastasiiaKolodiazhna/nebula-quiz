@@ -1,6 +1,6 @@
 "use client";
 
-import { Question } from "@/types/types";
+import { Question } from "@/types/question";
 import {
   Container,
   QuestionContainer,
@@ -11,6 +11,7 @@ import {
 } from "./QuestionPage.style";
 import { useHandleAnswer } from "@/hooks/useHandleAnswer";
 import { getTextFromTemplate } from "@/utils/getTextFromTemplate";
+import { Answer } from "@/types/answer";
 
 const QuestionPage = ({ question }: { question: Question }) => {
   const {
@@ -33,13 +34,14 @@ const QuestionPage = ({ question }: { question: Question }) => {
         {statement && <Statement>{`"${statement}"`}</Statement>}
         <AnswerList>
           {answers.length > 0 ? (
-            answers.map((answer: any) => (
+            answers.map((answer: Answer) => (
               <AnswerItem
                 key={answer.id}
                 onClick={() =>
                   handleAnswerClick(
                     answer.next,
-                    Object.hasOwn(answer, "value") ? answer.value : answer.text
+                    (Object.hasOwn(answer, "value") && answer.value) ||
+                      answer.text
                   )
                 }
               >

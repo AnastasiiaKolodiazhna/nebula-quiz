@@ -1,5 +1,5 @@
-import { AnswerData } from '@/types/types';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { AnswerData } from "@/types/answer";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface QuizState {
   answers: AnswerData[];
@@ -10,7 +10,7 @@ const initialState: QuizState = {
 };
 
 const quizSlice = createSlice({
-  name: 'quiz',
+  name: "quiz",
   initialState,
   reducers: {
     saveAnswer(state, action: PayloadAction<AnswerData>) {
